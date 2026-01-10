@@ -35,9 +35,6 @@ auto_write_v2/
 │   ├── CLAUDE.MD              # 工作流主文档
 │   ├── CHANGELOG.md           # 版本记录
 │   └── README.md              # 写作系统说明
-├── .claude/                   # Claude Code 配置
-├── static/                    # 静态资源
-├── .gitignore
 ├── CLAUDE.md                  # 项目级配置说明
 └── README.md                  # 本文件
 ```
