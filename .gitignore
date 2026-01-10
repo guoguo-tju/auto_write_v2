@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude
+.claude/cache/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
