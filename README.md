@@ -15,13 +15,31 @@
 
 ```
 auto_write_v2/
-├── writing-agent/        # 核心写作系统（主要代码）
-│   ├── .claude/skills/   # 写作流程的各个 Skill
-│   ├── .claude/styles/   # 风格库
-│   ├── articles/         # 生成的文章
-│   └── docs/            # 详细文档
-├── static/              # 静态资源
-└── README.md            # 本文件
+├── writing-agent/              # 核心写作系统
+│   ├── .claude/
+│   │   ├── skills/            # 写作流程 Skills（5个）
+│   │   │   ├── 澄清写作需求/  # 需求澄清
+│   │   │   ├── 调研资料/      # 素材调研
+│   │   │   ├── 风格建模/      # 风格提取
+│   │   │   ├── 写作执行/      # 分步写作
+│   │   │   └── 主编审稿/      # 审稿诊断
+│   │   └── styles/            # 风格库（12维度风格配方）
+│   │       ├── 参考文章/       # 样本文档
+│   │       ├── 蝈蝈的写作风格1.md
+│   │       └── 墨水怪风.md
+│   ├── articles/              # 生成的文章
+│   │   └── images/            # 文章配图
+│   ├── docs/                  # 详细文档
+│   │   ├── FAQ.md             # 常见问题
+│   │   └── PROJECT_STRUCTURE.md
+│   ├── CLAUDE.MD              # 工作流主文档
+│   ├── CHANGELOG.md           # 版本记录
+│   └── README.md              # 写作系统说明
+├── .claude/                   # Claude Code 配置
+├── static/                    # 静态资源
+├── .gitignore
+├── CLAUDE.md                  # 项目级配置说明
+└── README.md                  # 本文件
 ```
 
 ## 快速开始
