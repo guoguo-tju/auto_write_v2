@@ -30,13 +30,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 ```
 系统调用主编审稿，输出AI味道检测和修改建议
 
+### 配图生成
+```
+你："帮我给这篇文章配图" 或 "这篇文章需要配图"
+```
+系统扫描文章中的 `>>> 🖼️ IMAGE: 描述 <<<` 标记，调用API生成图片
+
 ## 核心架构（高层概念）
 
 项目通过5个强制性Skill实现工作流准入：
 
 ```
 用户请求 → writing-clarifier (必须) → research-expert (可选) → style-modeler (可选)
-    → writing-executor (必须) → editor-review (必须) → 最终稿
+    → writing-executor (必须) → editor-review (必须) → [可选: image-generator] → 最终稿
 ```
 
 **数据流：**
@@ -59,6 +65,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 | `writing-agent/CLAUDE.MD` | 完整工作流定义（优先阅读） |
 | `writing-agent/.claude/skills/*/SKILL.md` | 各Skill详细指令 |
 | `writing-agent/.claude/styles/*.md` | 风格库 |
+| `writing-agent/.claude/image-styles/*.md` | 图片风格库 |
+| `writing-agent/.claude/config.json` | API配置（含生图API） |
 | `writing-agent/articles/*.md` | 生成的文章 |
 | `.vscode/settings.json` | VSCode配置（已启用跳过权限检查） |
 

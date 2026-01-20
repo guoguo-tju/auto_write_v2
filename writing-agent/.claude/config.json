@@ -1,0 +1,14 @@
+{
+  "imageGeneration": {
+    "enabled": false,
+    "provider": "google",
+    "model": "nano-banana-pro",
+    "apiKey": "sk-cli-proxy-api-test-key",
+    "apiEndpoint": "http://localhost:8317",
+    "defaultStyle": "视觉笔记手绘",
+    "imageFormat": "png",
+    "savePath": "articles/{title}_images/",
+    "placeholderFormat": ">>> 🖼️ IMAGE: {description} <<<"
+  },
+  "version": "1.0.0"
+}
